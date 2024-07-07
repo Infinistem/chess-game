@@ -1,2 +1,3 @@
 # chess-game
-chess game in python using pygame graphics and a simple engine from scratch
+
+chess game in c++ using SFML Graphics
