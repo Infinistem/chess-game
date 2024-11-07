@@ -1,3 +1,3 @@
 # chess-game
 
-chess game in c++ using SFML Graphics
+retro console chess game in c using graphics.h
