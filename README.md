@@ -1,3 +1,3 @@
 # chess-game-in-c
 
-retro console chess game in c using graphics.h
+chess made in c using the windows api
