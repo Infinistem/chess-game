@@ -1,3 +1,3 @@
-# chess-game-in-c
+# chess-game-in-c++
 
-chess made in c using the windows api
+chess made in c++ using sfml
