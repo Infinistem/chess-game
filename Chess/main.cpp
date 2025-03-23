@@ -3,7 +3,7 @@
 
 #define WIDTH 512
 #define HEIGHT 512
-#define TILE 64  // Updated to match the size for an 8x8 board (WIDTH/8)
+#define TILE 64  
 
 int board[8][8] = {
     {2, 3, 4, 5, 6, 4, 3, 2 }, 
@@ -32,7 +32,6 @@ void drawBoard(sf::RenderWindow& window) {
 
             window.draw(tileShape);
 
-            // Draw pieces (simple circles for now)
             if (board[row][col] != 0) {
                 sf::CircleShape pieceShape(TILE / 2 - 4);
                 pieceShape.setPosition(col * TILE + 4, row * TILE + 4);
@@ -66,12 +65,10 @@ int main() {
                 sf::Vector2i clickedTile = getTileUnderMouse(window);
 
                 if (selectedTile.x == -1 && selectedTile.y == -1) {
-                    // Select a piece if it's a pawn (1 or -1)
                     if (board[clickedTile.y][clickedTile.x] != 0) {
                         selectedTile = clickedTile;
                     }
                 } else {
-                    // Try moving to clickedTile
                     board[clickedTile.y][clickedTile.x] = board[selectedTile.y][selectedTile.x];
                     board[selectedTile.y][selectedTile.x] = 0;  // Remove piece from the original spot
                     selectedTile = {-1, -1};  // Deselect the tile
